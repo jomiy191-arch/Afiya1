@@ -415,7 +415,7 @@ ul {
 /* ACTIVE */
 
 .lang-btn.active {
-    background: #fff;
+    background: #ffffff;
 
     color: var(--primary);
 
@@ -600,13 +600,13 @@ ul {
 
         background: rgba(255,255,255,.03);
 
-        color: #fff;
+        color: #ffffff;
 
         font-size: 16px;
     }
 
     .nav-links li a:hover {
-        background: rgba(255,255,255,.08);
+        background: rgba(96, 54, 54, 0.08);
 
         transform: translateX(4px);
     }
@@ -643,7 +643,7 @@ ul {
 
         border-radius: 10px;
 
-        color: rgba(255,255,255,.75);
+        color: rgba(11, 80, 255, 0.75);
 
         font-size: 13px;
     }
