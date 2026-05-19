@@ -185,4 +185,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     window.addEventListener('scroll', highlightNav, { passive: true });
+
+    // Hero rotating background images
+    const heroBg = document.querySelector('.hero-bg-video');
+    if (heroBg) {
+        const heroBgImages = [
+            'images/apple-concentrate.jpg',
+            'images/grape-concentrate.jpg',
+            'images/pomegranate-concentrate.jpg'
+        ];
+        let heroBgIndex = 0;
+
+        setInterval(() => {
+            heroBgIndex = (heroBgIndex + 1) % heroBgImages.length;
+            heroBg.style.backgroundImage = `url('${heroBgImages[heroBgIndex]}')`;
+        }, 6000);
+    }
 });
