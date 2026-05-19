@@ -583,6 +583,22 @@ ul {
         right: 0;
     }
 
+    /* When mobile menu (burger) opens, make each link look like a strong card */
+    .nav-links.active li a {
+        background: rgba(255,255,255,0.08);
+        color: var(--accent);
+        font-weight: 700;
+        box-shadow: 0 8px 24px rgba(2,8,20,0.35);
+        border-radius: 14px;
+        padding: 14px 18px;
+        transition: background .18s ease, color .18s ease, transform .18s ease;
+    }
+
+    .nav-links.active li a:hover {
+        background: rgba(255,255,255,0.12);
+        transform: translateX(4px);
+    }
+
     /* ITEMS */
 
     .nav-links li {
