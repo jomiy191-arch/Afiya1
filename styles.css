@@ -704,32 +704,6 @@ ul {
 ======================================== */
 
 .hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-/* ========================================
-   HERO SECTION
-======================================== */
-
-.hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-}
-.hero {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -916,7 +890,7 @@ ul {
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #fff;
     line-height: 1;
@@ -924,15 +898,16 @@ ul {
 }
 
 .stat-suffix {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .stat-label {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.55);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .stat-divider {
@@ -945,8 +920,9 @@ ul {
 .scroll-indicator {
     position: absolute;
     bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 32px;
+    left: auto;
+    transform: none;
     z-index: 2;
 }
 
@@ -1925,13 +1901,32 @@ ul {
     }
 
     .hero-stats {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         gap: 24px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .hero-stats::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-stats {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .stat {
+        flex: 0 0 auto;
+        min-width: 140px;
     }
 
     .stat-divider {
-        width: 40px;
-        height: 1px;
+        width: 1px;
+        height: 40px;
     }
 
     .footer-top {
@@ -1992,6 +1987,40 @@ ul {
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .hero-stats {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero-stats::-webkit-scrollbar {
+        display: none;
+    }
+
+    .stat {
+        flex: 0 0 auto;
+        min-width: 100px;
+        padding: 0 6px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .scroll-indicator {
+        right: 16px;
+        bottom: 24px;
     }
 
     .lang-switcher {
